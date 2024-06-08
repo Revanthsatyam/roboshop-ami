@@ -29,7 +29,7 @@ resource "aws_instance" "ami" {
 resource "null_resource" "main" {
   provisioner "remote-exec" {
     connection {
-      user     = root
+      user     = "root"
       password = "DevOps321"
       host     = aws_instance.ami.private_ip
     }
